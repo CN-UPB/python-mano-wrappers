@@ -8,7 +8,7 @@ PMW can be installed using pip:
 
     pip install python-mano-wrappers
 
-Documentation is available here - [ReadtheDocs](https://python-mano-wrappers.readthedocs.io/en/adaptor/).
+Documentation is available here - [ReadtheDocs](https://python-mano-wrappers.readthedocs.io).
 
 ## Structure
 
