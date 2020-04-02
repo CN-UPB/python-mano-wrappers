@@ -18,7 +18,7 @@ class CommonInterfaceNsd(ABC):
     Base: {apiRoot}/nsd/v1
     """
 
-    @abstractmethod
+     
     def get_ns_descriptors(self):
         """ NSD Management Interface - NS Descriptors
 
@@ -29,7 +29,7 @@ class CommonInterfaceNsd(ABC):
         """
         pass
 
-    @abstractmethod
+     
     def post_ns_descriptors(self):
         """ NSD Management Interface - NS Descriptors
 
@@ -38,7 +38,7 @@ class CommonInterfaceNsd(ABC):
         """
         pass
 
-    @abstractmethod
+     
     def get_ns_descriptors_nsdinfoid(self):
         """ NSD Management Interface -  Individual NS Descriptor
 
@@ -48,7 +48,7 @@ class CommonInterfaceNsd(ABC):
         """
         pass
 
-    @abstractmethod
+     
     def patch_ns_descriptors_nsdinfoid(self):
         """ NSD Management Interface - Individual NS Descriptor
 
@@ -67,7 +67,7 @@ class CommonInterfaceNsd(ABC):
         """
         pass
 
-    @abstractmethod
+     
     def get_ns_descriptors_nsd_content(self):
         """ NSD Management Interface - NSD Content
         
@@ -76,7 +76,7 @@ class CommonInterfaceNsd(ABC):
         """
         pass
 
-    @abstractmethod
+     
     def put_ns_descriptors_nsd_content(self):
         """ NSD Management Interface - NSD Content
         
@@ -86,7 +86,7 @@ class CommonInterfaceNsd(ABC):
         pass
 
 
-    @abstractmethod
+     
     def get_pnf_descriptors(self):
         """ NSD Management interface -
         PNF Descriptors
@@ -98,7 +98,7 @@ class CommonInterfaceNsd(ABC):
         """
         pass
 
-    @abstractmethod
+     
     def post_pnf_descriptors(self):
         """ NSD Management interface -
         PNF Descriptors
@@ -109,7 +109,7 @@ class CommonInterfaceNsd(ABC):
         """
         pass
 
-    @abstractmethod
+     
     def get_pnf_descriptors_pnfdinfoid(self, pnfdInfoId):
         """ NSD Management interface -
         Individual PNF Descriptor
@@ -120,7 +120,7 @@ class CommonInterfaceNsd(ABC):
         """
         pass
 
-    @abstractmethod
+     
     def patch_pnf_descriptors_pnfdinfoid(self, pnfdInfoId):
         """ NSD Management interface -
         Individual PNF Descriptor
@@ -132,7 +132,7 @@ class CommonInterfaceNsd(ABC):
         """
         pass
 
-    @abstractmethod
+     
     def delete_pnf_descriptors_pnfdinfoid(self, pnfdInfoId):
         """ NSD Management interface -
         Individual PNF Descriptor
@@ -143,7 +143,7 @@ class CommonInterfaceNsd(ABC):
         """
         pass
 
-    @abstractmethod
+     
     def get_pnf_descriptors_pnfd_content(self, pnfdInfoId):
         """ NSD Management interface -
         PNFD Content
@@ -154,7 +154,7 @@ class CommonInterfaceNsd(ABC):
         """
         pass
 
-    @abstractmethod
+     
     def put_pnf_descriptors_pnfd_content(self, pnfdInfoId):
         """ NSD Management interface -
         PNFD Content
@@ -165,7 +165,7 @@ class CommonInterfaceNsd(ABC):
         """
         pass
 
-    @abstractmethod
+     
     def post_subscriptions(self, pnfdInfoId):
         """ NSD Management interface -
         Subscriptions
@@ -176,7 +176,7 @@ class CommonInterfaceNsd(ABC):
         """
         pass
 
-    @abstractmethod
+     
     def get_subscriptions(self, subscriptionId):
         """ NSD Management interface -
         Subscriptions
@@ -187,7 +187,7 @@ class CommonInterfaceNsd(ABC):
         """
         pass
 
-    @abstractmethod
+     
     def get_subscriptions_subscriptionid(self, subscriptionid):
         """ NSD Management interface -
         Individual Subscription
@@ -198,7 +198,7 @@ class CommonInterfaceNsd(ABC):
         """
         pass
 
-    @abstractmethod
+     
     def delete_subscriptions_subscriptionid(self, subscriptionid):
         """ NSD Management interface -
         Individual Subscription

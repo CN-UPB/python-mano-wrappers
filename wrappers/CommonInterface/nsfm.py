@@ -18,7 +18,7 @@ class CommonInterfaceNsfm(ABC):
     Base: {apiRoot}/nsfm/v1
     """
 
-    @abstractmethod
+     
     def get_nsfm_alarms(self):
         """  NS Fault Management interface - 
         Alarms
@@ -30,7 +30,7 @@ class CommonInterfaceNsfm(ABC):
         pass
 
 
-    @abstractmethod
+     
     def get_nsfm_alarms_alarmid(self, alarmId):
         """  NS Fault Management interface - 
         Individual alarm
@@ -42,7 +42,7 @@ class CommonInterfaceNsfm(ABC):
         pass
 
 
-    @abstractmethod
+     
     def patch_nsfm_alarms_alarmid(self, alarmId):
         """  NS Fault Management interface - 
         Individual alarm
@@ -54,7 +54,7 @@ class CommonInterfaceNsfm(ABC):
         pass
 
 
-    @abstractmethod
+     
     def get_nsfm_subscriptions(self):
         """  NS Fault Management interface - 
         Subscriptions
@@ -66,7 +66,7 @@ class CommonInterfaceNsfm(ABC):
         pass
 
 
-    @abstractmethod
+     
     def post_nsfm_subscriptions(self):
         """  NS Fault Management interface - 
         Subscriptions
@@ -78,7 +78,7 @@ class CommonInterfaceNsfm(ABC):
         pass
 
 
-    @abstractmethod
+     
     def get_nsfm_subscriptions_subscriptionid(self, subscriptionId):
         """  NS Fault Management interface - 
         Individual subscription
@@ -90,7 +90,7 @@ class CommonInterfaceNsfm(ABC):
         pass
 
 
-    @abstractmethod
+     
     def delete_nsfm_subscriptions_subscriptionid(self, subscriptionId):
         """  NS Fault Management interface - 
         Individual subscription
@@ -102,7 +102,7 @@ class CommonInterfaceNsfm(ABC):
         pass
 
 
-    # @abstractmethod
+    #  
     # def get_nsfm_unknown(self):
     #     """  NS Fault Management interface - 
     #             Notification endpoint
@@ -114,7 +114,7 @@ class CommonInterfaceNsfm(ABC):
     #     pass
 
 
-    # @abstractmethod
+    #  
     # def post_nsfm_unknown(self):
     #     """  NS Fault Management interface - 
     #             Notification endpoint

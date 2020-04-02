@@ -12,28 +12,28 @@ from abc import ABC, abstractmethod
 
 class CommonInterfaceSonPackage(ABC):
 
-    @abstractmethod
+     
     def get_son_packages(self):
         """  Receive the list of stored packages
         """
         pass
 
 
-    @abstractmethod
+     
     def post_son_packages(self):
         """  Send a particular package
 
         """
         pass
 
-    @abstractmethod
+     
     def delete_son_packages_PackageId(self, PackageId):
         """  Delete a particular sonata package
 
         """
         pass
 
-    @abstractmethod
+     
     def get_son_packages_PackageId(self, PackageId):
         """  Receive a particular stored packages
         """

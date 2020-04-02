@@ -17,7 +17,7 @@ class CommonInterfaceNslcm(ABC):
     Base: {apiRoot}/nslcm/v1
     """
 
-    @abstractmethod
+     
     def get_ns_instances(self):
         """  NS Lifecycle Management interface - 
         NS instances
@@ -29,7 +29,7 @@ class CommonInterfaceNslcm(ABC):
         pass
 
 
-    @abstractmethod
+     
     def post_ns_instances(self):
         """  NS Lifecycle Management interface - 
         NS instances
@@ -41,7 +41,7 @@ class CommonInterfaceNslcm(ABC):
         pass
 
 
-    @abstractmethod
+     
     def get_ns_instances_nsinstanceid(self, nsInstanceId):
         """  NS Lifecycle Management interface - 
         Individual NS instance
@@ -53,7 +53,7 @@ class CommonInterfaceNslcm(ABC):
         pass
 
 
-    @abstractmethod
+     
     def delete_ns_instances_nsinstanceid(self, nsInstanceId):
         """  NS Lifecycle Management interface - 
         Individual NS instance
@@ -65,7 +65,7 @@ class CommonInterfaceNslcm(ABC):
         pass
 
 
-    @abstractmethod
+     
     def post_ns_instances_nsinstanceid_instantiate(self, nsInstanceId):
         """  NS Lifecycle Management interface - 
         Instantiate NS task
@@ -77,7 +77,7 @@ class CommonInterfaceNslcm(ABC):
         pass
 
 
-    @abstractmethod
+     
     def post_ns_instances_nsinstanceid_scale(self, nsInstanceId):
         """  NS Lifecycle Management interface - 
         Scale NS task
@@ -89,7 +89,7 @@ class CommonInterfaceNslcm(ABC):
         pass
 
 
-    @abstractmethod
+     
     def post_ns_instances_nsinstanceid_update(self, nsInstanceId):
         """  NS Lifecycle Management interface - 
         Update NS task
@@ -101,7 +101,7 @@ class CommonInterfaceNslcm(ABC):
         pass
 
 
-    @abstractmethod
+     
     def post_ns_instances_nsinstanceid_terminate(self, nsInstanceId):
         """  NS Lifecycle Management interface - 
         Terminate NS task
@@ -113,7 +113,7 @@ class CommonInterfaceNslcm(ABC):
         pass
 
 
-    @abstractmethod
+     
     def post_ns_instances_nsinstanceid_heal(self, nsInstanceId):
         """  NS Lifecycle Management interface - 
         Heal NS task
@@ -125,7 +125,7 @@ class CommonInterfaceNslcm(ABC):
         pass
 
 
-    @abstractmethod
+     
     def get_ns_lcm_op_ops(self):
         """  NS Lifecycle Management interface - 
         NS lifecycle operation occurrences
@@ -137,7 +137,7 @@ class CommonInterfaceNslcm(ABC):
         pass
 
 
-    @abstractmethod
+     
     def get_ns_lcm_op_ops_nslcmopoccid(self, nsLcmOpOccId):
         """  NS Lifecycle Management interface - 
         Individual NS lifecycle operation occurrence
@@ -149,7 +149,7 @@ class CommonInterfaceNslcm(ABC):
         pass
 
 
-    @abstractmethod
+     
     def post_ns_lcm_op_occs_nslcmopoccid_retry(self, nsLcmOpOccId):
         """  NS Lifecycle Management interface - 
         Retry operation task
@@ -161,7 +161,7 @@ class CommonInterfaceNslcm(ABC):
         pass
 
 
-    @abstractmethod
+     
     def post_ns_lcm_op_occs_nslcmopoccid_rollback(self, nsLcmOpOccId):
         """  NS Lifecycle Management interface - 
         Rollback operation task
@@ -173,7 +173,7 @@ class CommonInterfaceNslcm(ABC):
         pass
 
 
-    @abstractmethod
+     
     def post_ns_lcm_op_occs_nslcmopoccid_continue(self, nsLcmOpOccId):
         """  NS Lifecycle Management interface - 
         Continue operation task
@@ -185,7 +185,7 @@ class CommonInterfaceNslcm(ABC):
         pass
 
 
-    @abstractmethod
+     
     def post_ns_lcm_op_occs_nslcmopoccid_fail(self, nsLcmOpOccId):
         """  NS Lifecycle Management interface - 
         Fail operation task
@@ -197,7 +197,7 @@ class CommonInterfaceNslcm(ABC):
         pass
 
 
-    @abstractmethod
+     
     def post_ns_lcm_op_occs_nslcmopoccid_cancel(self, nsLcmOpOccId):
         """  NS Lifecycle Management interface - 
         Cancel operation task
@@ -209,7 +209,7 @@ class CommonInterfaceNslcm(ABC):
         pass
 
 
-    @abstractmethod
+     
     def post_ns_lcm_subscriptions(self):
         """  NS Lifecycle Management interface - 
         Subscriptions
@@ -221,7 +221,7 @@ class CommonInterfaceNslcm(ABC):
         pass
 
 
-    @abstractmethod
+     
     def get_ns_lcm_subscriptions(self):
         """  NS Lifecycle Management interface - 
         Subscriptions
@@ -233,7 +233,7 @@ class CommonInterfaceNslcm(ABC):
         pass
 
 
-    @abstractmethod
+     
     def get_ns_lcm_subscriptions_subscriptionid(self, subscriptionId):
         """  NS Lifecycle Management interface - 
         Individual subscription
@@ -245,7 +245,7 @@ class CommonInterfaceNslcm(ABC):
         pass
 
 
-    @abstractmethod
+     
     def delete_ns_lcm_subscriptions_subscriptionid(self, subscriptionId):
         """  NS Lifecycle Management interface - 
         Individual subscription
@@ -257,7 +257,7 @@ class CommonInterfaceNslcm(ABC):
         pass
 
 
-    # @abstractmethod
+    #  
     # def get_unknown(self):
     #     """  NS Lifecycle Management interface - 
     #             Notification endpoint
@@ -269,7 +269,7 @@ class CommonInterfaceNslcm(ABC):
     #     pass
 
 
-    # @abstractmethod
+    #  
     # def post_unknown(self):
     #     """  NS Lifecycle Management interface - 
     #             Notification endpoint

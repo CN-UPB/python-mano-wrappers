@@ -18,7 +18,7 @@ class CommonInterfaceNspm(ABC):
     Base: {apiRoot}/nspm/v1
     """
 
-    @abstractmethod
+     
     def get_pm_jobs(self):
         """ NS Performance Management Interface - 
         PM jobs
@@ -29,7 +29,7 @@ class CommonInterfaceNspm(ABC):
         """
         pass
 
-    @abstractmethod
+     
     def post_pm_jobs(self):
         """ NS Performance Management Interface - 
         PM jobs
@@ -40,7 +40,7 @@ class CommonInterfaceNspm(ABC):
         """
         pass
 
-    @abstractmethod
+     
     def get_pm_jobs_pmjobid(self, pmJobId):
         """ NS Performance Management Interface - 
         Individual PM job
@@ -51,7 +51,7 @@ class CommonInterfaceNspm(ABC):
         """
         pass
 
-    @abstractmethod
+     
     def delete_pm_jobs_pmjobid(self, pmJobId):
         """ NS Performance Management Interface - 
         Individual PM job
@@ -62,7 +62,7 @@ class CommonInterfaceNspm(ABC):
         """
         pass
 
-    @abstractmethod
+     
     def get_pm_jobs_pmjobid_reports_reportid(self, pmJobId, reportId):
         """ NS Performance Management Interface - 
         Individual performance report
@@ -73,7 +73,7 @@ class CommonInterfaceNspm(ABC):
         """
         pass
 
-    @abstractmethod
+     
     def get_pm_thresholds(self):
         """ NS Performance Management Interface - 
         Thresholds
@@ -84,7 +84,7 @@ class CommonInterfaceNspm(ABC):
         """
         pass
 
-    @abstractmethod
+     
     def post_pm_thresholds(self):
         """ NS Performance Management Interface - 
         Thresholds
@@ -95,7 +95,7 @@ class CommonInterfaceNspm(ABC):
         """
         pass
 
-    @abstractmethod
+     
     def get_pm_thresholds_thresholdid(self, thresholdId):
         """ NS Performance Management Interface - 
         Individual threshold
@@ -106,7 +106,7 @@ class CommonInterfaceNspm(ABC):
         """
         pass
 
-    @abstractmethod
+     
     def delete_pm_thresholds_thresholdid(self, thresholdId):
         """ NS Performance Management Interface - 
         Individual threshold
@@ -117,7 +117,7 @@ class CommonInterfaceNspm(ABC):
         """
         pass
 
-    @abstractmethod
+     
     def get_pm_subscriptions(self):
         """ NS Performance Management Interface - 
         Subscriptions
@@ -128,7 +128,7 @@ class CommonInterfaceNspm(ABC):
         """
         pass
 
-    @abstractmethod
+     
     def post_pm_subscriptions(self):
         """ NS Performance Management Interface - 
         Subscriptions
@@ -139,7 +139,7 @@ class CommonInterfaceNspm(ABC):
         """
         pass
 
-    @abstractmethod
+     
     def get_pm_subscriptions_subscriptionid(self, subscriptionId):
         """ NS Performance Management Interface - 
         Individual
@@ -150,7 +150,7 @@ class CommonInterfaceNspm(ABC):
         """
         pass
 
-    @abstractmethod
+     
     def delete_pm_subscriptions_subscriptionid(self, subscriptionId):
         """ NS Performance Management Interface - 
         Individual
@@ -161,7 +161,7 @@ class CommonInterfaceNspm(ABC):
         """
         pass
 
-    # @abstractmethod
+    #  
     # def get_unknown(self):
     #     """ NS Performance Management Interface - 
     #             Notification endpoint
@@ -172,7 +172,7 @@ class CommonInterfaceNspm(ABC):
     #     """
     #     pass
 
-    # @abstractmethod
+    #  
     # def post_unknown(self):
     #     """ NS Performance Management Interface - 
     #             Notification endpoint

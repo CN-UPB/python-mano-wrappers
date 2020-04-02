@@ -18,7 +18,7 @@ class CommonInterfaceVnfPkgm(ABC):
     Base: {apiRoot}/vnfpkgm/v1
     """
 
-    @abstractmethod
+     
     def get_vnf_packages(self):
         """ VNF Package Management Interface - VNF packages
 
@@ -28,7 +28,7 @@ class CommonInterfaceVnfPkgm(ABC):
         """
         pass
 
-    @abstractmethod
+     
     def post_vnf_packages(self):
         """ VNF Package Management Interface - VNF packages
 
@@ -39,7 +39,7 @@ class CommonInterfaceVnfPkgm(ABC):
         """
         pass
 
-    @abstractmethod
+     
     def get_vnf_packages_vnfpkgid(self, vnfPkgId):
         """ VNF Package Management Interface - 
         Individual VNF package
@@ -51,7 +51,7 @@ class CommonInterfaceVnfPkgm(ABC):
         """
         pass
 
-    @abstractmethod
+     
     def patch_vnf_packages_vnfpkgid(self, vnfPkgId):
         """ VNF Package Management Interface - 
         Individual VNF package
@@ -63,7 +63,7 @@ class CommonInterfaceVnfPkgm(ABC):
         """
         pass
 
-    @abstractmethod
+     
     def delete_vnf_packages_vnfpkgid(self, vnfPkgId):
         """ VNF Package Management Interface - 
         Individual VNF package
@@ -74,7 +74,7 @@ class CommonInterfaceVnfPkgm(ABC):
         """
         pass
 
-    @abstractmethod
+     
     def get_vnf_packages_vnfpkgid_vnfd(self, vnfPkgId):
         """ VNF Package Management Interface - 
         VNFD of an individual VNF package
@@ -85,7 +85,7 @@ class CommonInterfaceVnfPkgm(ABC):
         """
         pass
 
-    @abstractmethod
+     
     def get_vnf_packages_vnfpkgid_package_content(self, vnfPkgId):
         """ VNF Package Management Interface - 
         VNF package content
@@ -96,7 +96,7 @@ class CommonInterfaceVnfPkgm(ABC):
         """
         pass
 
-    @abstractmethod
+     
     def put_vnf_packages_vnfpkgid_package_content(self, vnfPkgId):
         """ VNF Package Management Interface - 
         VNF package content
@@ -108,7 +108,7 @@ class CommonInterfaceVnfPkgm(ABC):
         """
         pass
 
-    @abstractmethod
+     
     def post_vnf_packages_vnfpkgid_package_content(self, vnfPkgId):
         """ VNF Package Management Interface - 
         Upload VNF package from URI task
@@ -120,7 +120,7 @@ class CommonInterfaceVnfPkgm(ABC):
         """
         pass
 
-    @abstractmethod
+     
     def get_vnf_packages_vnfpkgid_artifacts_artifactpath(self, 
             vnfPkgId, artifactPath):
         """ VNF Package Management Interface - 
@@ -132,7 +132,7 @@ class CommonInterfaceVnfPkgm(ABC):
         """
         pass
 
-    @abstractmethod
+     
     def get_vnf_packages_subscriptions(self):
         """ VNF Package Management Interface - 
         Subscriptions
@@ -143,7 +143,7 @@ class CommonInterfaceVnfPkgm(ABC):
         """
         pass
 
-    @abstractmethod
+     
     def post_vnf_packages_subscriptions(self):
         """ VNF Package Management Interface - 
         Subscriptions

@@ -4,7 +4,7 @@ class CommonInterfaceAuth(ABC):
     """ Authorization API
     """
     
-    @abstractmethod
+     
     def auth(self):
         """ Authorization API
 

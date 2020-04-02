@@ -6,9 +6,10 @@ class Pishahang():
     Pishahang Related Interfaces
     """
     
-    def __init__(self, host, port=4002, requests_port=32001):
+    def __init__(self, host, port=4002, requests_port=32001, policy_port=8899):
         self._host = host
         self._port = port
+        self.policy_port = policy_port
         self._requests_port = requests_port
         self._base_path = 'http://{0}:{1}'
         self._user_endpoint = '{0}'
@@ -91,6 +92,114 @@ class Pishahang():
             result['data'] = str(e)
             return result
         if r.status_code == requests.codes.created:
+            result['error'] = False
+
+        result['data'] = r.text
+        return json.dumps(result)
+
+    def get_pd_descriptors(self, offset=None, limit=None, host=None, port=None):
+        """ PD Management Interface - Policy descriptors
+
+        :param token: auth token retrieved by the auth call
+        :param offset: offset index while returning
+        :param limit: limit records while returning
+        :param host: host url
+        :param port: port where the MANO API can be accessed
+
+        """
+        if host is None:
+            base_path = self._base_path.format(self._host, self.policy_port)
+        else:
+            base_path = self._base_path.format(host, port)
+
+        _endpoint = "{0}/policy_descriptor".format(base_path)
+
+        result = {'error': True, 'data': ''}
+        headers = {"Content-Type": "application/json"}
+
+        try:
+            r = requests.get(_endpoint, params=None, verify=False, stream=True, headers=headers)
+        except Exception as e:
+            result['data'] = str(e)
+            return result
+
+        if r.status_code == requests.codes.ok:
+            result['error'] = False
+        
+        result['data'] = r.text
+        return json.dumps(result)        
+
+    def post_pd_descriptors(self, package_path, host=None, port=None):
+        """ PD Policy descriptors
+
+        /policy_descriptors:
+            POST - Create a new individual 
+            Policy resource
+
+        :param token: auth token retrieved by the auth call
+        :param package_path: file path of the package
+        :param host: host url
+        :param port: port where the MANO API can be accessed
+
+        Example:
+            .. code-block:: python
+
+                sonata_pishahang = SONATAClient.Pishahang(HOST_URL)
+                sonata_auth = SONATAClient.Auth(HOST_URL)
+
+                _token = json.loads(sonata_auth.auth(username=USERNAME, password=PASSWORD))
+                _token = json.loads(_token["data"])
+
+                response = json.loads(sonata_pishahang.post_pd_descriptors(
+                                        token=_token["token"]["access_token"],
+                                        package_path="tests/samples/policy_example.yml"))
+
+        """
+        if host is None:
+            base_path = self._base_path.format(self._host, self.policy_port)
+        else:
+            base_path = self._base_path.format(host, port)
+
+        result = {'error': True, 'data': ''}
+        headers = {"Content-Type": "application/x-yaml", "accept": "application/json"}
+        _endpoint = "{0}/policy_descriptor".format(base_path)
+        try:
+            r = requests.post(_endpoint, data=open(package_path, 'r'), verify=False, headers=headers)
+        except Exception as e:
+            result['data'] = str(e)
+            return result
+        if r.status_code == requests.codes.created:
+            result['error'] = False
+
+        result['data'] = r.text
+        return json.dumps(result)
+
+    def delete_pd_descriptors_pdpkgid(self, pdpkgid, host=None, port=None):
+        """ PD Management Interface - 
+        Individual PD package
+
+        :param token: auth token retrieved by the auth call
+        :param csdpkgid: id of the vnf package to fetch
+        :param host: host url
+        :param port: port where the MANO API can be accessed
+
+        """
+        if host is None:
+            base_path = self._base_path.format(self._host, self.policy_port)
+        else:
+            base_path = self._base_path.format(host, port)
+
+        result = {'error': True, 'data': ''}
+        headers = {"Content-Type": "application/json"}
+
+        _endpoint = "{0}/policy_descriptor".format(base_path)
+        _data = { "name":  pdpkgid }
+        try:
+            r = requests.delete(_endpoint, data=json.dumps(_data), params=None, verify=False, headers=headers)
+        except Exception as e:
+            result['data'] = str(e)
+            return result
+        if r.status_code == requests.codes.ok:
             result['error'] = False
 
         result['data'] = r.text
