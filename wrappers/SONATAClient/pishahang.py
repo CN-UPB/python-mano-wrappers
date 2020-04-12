@@ -164,7 +164,7 @@ class Pishahang():
         headers = {"Content-Type": "application/x-yaml", "accept": "application/json"}
         _endpoint = "{0}/policy_descriptor".format(base_path)
         try:
-            r = requests.post(_endpoint, data=open(package_path, 'r'), verify=False, headers=headers)
+            r = requests.post(_endpoint, data=open(package_path, 'rb'), verify=False, headers=headers)
         except Exception as e:
             result['data'] = str(e)
             return result
